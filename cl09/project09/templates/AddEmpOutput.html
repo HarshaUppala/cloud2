@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+	<style>
+		 body {
+    --color-primary: #9478ce;
+    --color-primary-dark: #7035a8;
+    --color-secondary: #1c489b;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 7px;
+    margin: 0;
+    height: 100vh;
+    font-size: 18px;
+    background: url("../background.jpg");
+    background-size: cover;
+}
+
+.container{
+	display: flex;
+      align-items: center;
+      justify-content:center;
+	  color: black;
+	  width: 30%;
+      padding: 2rem;
+      background-color: white;
+      border: 2rem;
+      border-radius: 1rem;
+	  margin-bottom: 2rem;
+}
+
+.btncontainer{
+	display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+h1 , h2{
+	text-align: center;
+	color: black;
+	margin: 0;
+}
+
+.button{
+        background-color: var(--color-primary);
+    }
+    .button:hover{
+        background-color: var(--color-secondary);
+    }
+	</style>
+
+		<body>
+			<h1>SAVE SUCCESSFUL</h1><br>
+			<h2>Following Employee has been added to the database</h2><br>
+			<h2>{{ name }}</h2><br>
+			<div class="container">
+			<div class="formcontainer"
+			action="/retemp"
+			autocomplete="on"
+			method="GET"
+			enctype="multipart/form-data">
+
+				Name:<br> {{ ename }} <br><br>
+
+				Email:<br> {{ email }} <br><br>
+
+				Phone Number:<br> {{ ephno }} <br><br>
+
+				Experience:<br> {{ exp }} <br><br>
+
+				Aptitude Score:<br> {{ apt }} <br><br>
+
+				Group Discussion Score: <br> {{ gdscore }} <br><br>
+				
+			    HR score:<br> {{ hrscore }} <br><br>
+
+			    Location:<br> {{ location }} <br><br>
+
+			</div>
+			</div>
+			<div class="btncontainer">
+				<form  action="http://13.233.142.142" autocomplete="on" method = "GET">
+
+					<button class="button" type="submit"">GO BACK</button><br>
+
+				</form>
+			</div>
+		</body>
+</head>
+<body>
+
+</body>
+</html>
